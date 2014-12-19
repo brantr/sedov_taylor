@@ -27,6 +27,8 @@ class SedovTaylor
 		double V_min;
 		double V_max;
 		double xi_V(double Vx);
+		double V_xi(double xV);
+
 
 		double Z(double xi);
 		double G(double xi);
@@ -42,6 +44,8 @@ class SedovTaylor
 		double R(double t);
 		double dRdt(double t);
 };
+double f_V_xi(double V, void *params);
+double df_V_xi_dV(double V, void *params);
 double xi_V_SedovTaylor(double V, void *params);
 double Z_SedovTaylor(double xi, void *params);
 double G_SedovTaylor(double xi, void *params);

@@ -24,7 +24,11 @@ double Interpolation::y(double x)
 		return yt[n-1];
 
 	ix = gsl_interp_bsearch(xt,x,0,n-2);
-	return (yt[ix+1]-yt[ix])*(x-xt[ix])/(xt[ix+1]-xt[ix]) + yt[ix];
+	//return (yt[ix+1]-yt[ix])*(x-xt[ix])/(xt[ix+1]-xt[ix]) + yt[ix];
+	//return exp( (log(yt[ix+1])-log(yt[ix]))*(log(x)-log(xt[ix]))/(log(xt[ix+1])-log(xt[ix])) + log(yt[ix]));
+	//printf("ix %ld x %e %e %e\n",ix,x,xt[ix],xt[ix+1]);
+	return exp( (log(yt[ix+1])-log(yt[ix]))*((x)-(xt[ix]))/((xt[ix+1])-(xt[ix])) + log(yt[ix]));
+
 	//return gsl_spline_eval(spline_x_y,x,acc_x_y);
 	//return gsl_interp_eval(linear_x_y,xt,yt,x,acc_l_x_y);
 }
