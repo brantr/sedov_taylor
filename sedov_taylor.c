@@ -3,7 +3,6 @@
 #include "rk_int.h"
 #include "sedov_taylor.h"
 #include "bisection_root_finding.h"
-Interpolation V_xi_Interpolant;
 SedovTaylor::SedovTaylor(void)
 {
 	flag_init = 0;

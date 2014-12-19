@@ -1,7 +1,5 @@
 #ifndef SEDOV_TAYLOR
 #define SEDOV_TAYLOR
-#include "interpolation.h"
-extern Interpolation V_xi_Interpolant;
 class SedovTaylor
 {
 	public:
