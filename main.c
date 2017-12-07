@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 	r_min = 1.0e-2;//*ST.R(ST.t);
 	//r_max = 1.1*ST.R(ST.t);
 	//printf("rho_1 %e\n",ST.rho_1);
-	printf("%d\n",n);
+	//printf("%d\n",n);
 	for(int i=0;i<n;i++)
 	{
 		r = (r_max-r_min)*((double) i)/((double) (n-1)) + r_min;
